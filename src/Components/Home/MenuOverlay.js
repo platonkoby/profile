@@ -6,7 +6,7 @@ import { MenuButtonsContext, MenuContext } from '../../Context/MenuContext'
 function MenuOverlay() {
 
     const {toggleMenu} = useContext(MenuContext)
-    const {gridButtonHovered, setGridButtonHoveredTrue, setGridButtonHoveredFalse, toggleGrid} = useContext(GridButtonContext)
+    const {gridButtonHovered, toggleGrid} = useContext(GridButtonContext)
     const {HamburgerIcon, GridIcon, ArrowLeftIcon, mediumIconSize, bigIconSize} = useContext(MenuButtonsContext)
     const [quickMenuButtonClasses, setQuickMenuButtonClasses] = useState("grid-button-container");
     const [arrowIconClasses, setArrowIconClasses] = useState("arrow-left")
@@ -35,9 +35,7 @@ function MenuOverlay() {
         </div>
         <div className={quickMenuButtonClasses}>
           <GridIcon size={mediumIconSize}
-                    onClick={toggleGrid}
-                    onMouseEnter={setGridButtonHoveredTrue}
-                    onMouseLeave={setGridButtonHoveredFalse} />
+                    onClick={toggleGrid} />
         </div>
         <ArrowLeftIcon size={bigIconSize} className={arrowIconClasses} />
     </div>
