@@ -4,7 +4,7 @@ import { GridButtonContext } from '../../Context/GridButtonContext'
 
 function Title() {
 
-  const {gridButtonHovered, setGridButtonHoveredTrue, setGridButtonHoveredFalse, toggleGrid} = useContext(GridButtonContext)
+  const {gridButtonHovered, toggleGridHover, toggleGrid} = useContext(GridButtonContext)
   const [titleBtnClasses, setTitleBtnClasses] = useState("title-btn")
 
   useEffect(() => {
@@ -19,8 +19,8 @@ function Title() {
       <div className="title-support">press 'q' for quick navigation</div>
       <button className={titleBtnClasses}
               onClick={toggleGrid}
-              onMouseEnter={setGridButtonHoveredTrue}
-              onMouseLeave={setGridButtonHoveredFalse}
+              onMouseEnter={toggleGridHover}
+              onMouseLeave={toggleGridHover}
       >q</button>
     </div>
   )

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './Assets/Styles/App.scss';
 import BaseLayer from './Components/Layers/BaseLayer';
 import OverviewLayer from './Components/Layers/OverviewLayer';
@@ -12,10 +12,11 @@ function App() {
   const [gridOpened, setGridOpened] = useState()
   const identity = a => a;
 
-  const toggleMenu = () => setMenuOpened(!menuOpened)
+  const toggleMenu = () => setMenuOpened(menuOpened => !menuOpened)
 
-  const setGridButtonHoveredTrue = () => setGridButtonHovered(true)
-  const setGridButtonHoveredFalse = () => setGridButtonHovered(false)
+  const toggleGrid = () => setGridOpened(gridOpened => !gridOpened)
+
+  const toggleGridHover = () => setGridButtonHovered(gridButtonHovered => !gridButtonHovered)
 
   const safeToggleOperation = (operation, guard, recover = () => {}) => 
   input => guard(input, operation) || recover;
@@ -27,8 +28,6 @@ function App() {
 
   const orElse = identity;
 
-  const toggleGrid = () => setGridOpened(gridOpened => !gridOpened)
-
   const safeToggleGridOnKeyPressed = safeToggleOperation(
     toggleGrid,
     onlyIf(keyPressedIsQ),
@@ -37,7 +36,7 @@ function App() {
 
   return (
     <div tabIndex={0} onKeyDown={safeToggleGridOnKeyPressed}>
-      <GridButtonContext.Provider value={{gridButtonHovered, setGridButtonHoveredTrue, setGridButtonHoveredFalse, toggleGrid}}>
+      <GridButtonContext.Provider value={{gridButtonHovered, toggleGridHover, toggleGrid}}>
       <MenuContext.Provider value={{toggleMenu}}>
         <BaseLayer />
       </MenuContext.Provider>

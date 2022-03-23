@@ -6,7 +6,7 @@
     position: fixed;
     padding: 12px 0 12px 1rem;
     background-color: $bkg-menu-overlay;
-    @include flex(row, center, start, 0.5em)
+    @include flex(row, center, flex-start, 0.5em)
 }
 
 .button-container {
