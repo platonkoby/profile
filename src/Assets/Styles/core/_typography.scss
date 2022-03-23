@@ -1,0 +1,7 @@
+@use '../abstracts/' as *;
+
+body {
+    font-size: $size-base;
+    font-family: $roboto;
+    font-weight: $weight-400;
+}

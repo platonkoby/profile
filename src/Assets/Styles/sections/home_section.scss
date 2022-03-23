@@ -1,0 +1,10 @@
+@use '../abstracts' as a;
+
+.home-section-container {
+    width: 100%;
+    height: 30rem;
+    background: a.$bkg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,36 @@
+@use '../abstracts/' as a;
+
+.title {
+    @include a.flex(column, center, center, 1em);
+}
+
+.title-main {
+    font-size: a.$size-title;
+    text-transform: uppercase;
+    font-weight: a.$weight-100;
+    letter-spacing: .1em;
+}
+
+.title-support {
+    font-size: a.$size-small-heading;
+    letter-spacing: .1em;
+    // font-weight: a.$weight-500;
+    // text-transform: uppercase;
+}
+
+.title-btn {
+    all: unset;
+    width: calc(a.$size-heading - .25em);
+    height: calc(a.$size-heading - .25em);
+    border-radius: 50%;
+    font-size: a.$size-heading;
+    border: 1px solid a.$light;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.title-btn-hover {
+    background-color: a.$bkg-darken;
+    border-color: transparent;
+    cursor: pointer;
+}

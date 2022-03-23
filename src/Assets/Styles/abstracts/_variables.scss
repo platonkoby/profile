@@ -1,0 +1,40 @@
+//bkg-colors
+$bkg: aqua;
+$bkg-darken: darken($bkg, 15%);
+$bkg-menu-overlay: darken($bkg, 5%);
+
+
+//colors
+$light: rgb(228, 227, 227);
+
+
+//font-sizes
+$size-base: 16px;
+$size-small-heading: 1.3em; 
+$size-heading: 1.7em;
+$size-4: 4em;
+$size-title: 5em;
+
+
+//font-families
+//Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+$roboto: 'Roboto', sans-serif;
+
+
+
+//font-weights
+$weight-100: 100;
+$weight-300: 300;
+$weight-400: 400;
+$weight-500: 500;
+$weight-700: 700;
+$weight-900: 900;
+
+
+//heights
+
+$size-button: 25px;
+$menu-overlay-height: calc($size-button + 24px);

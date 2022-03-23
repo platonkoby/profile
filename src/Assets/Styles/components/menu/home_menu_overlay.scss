@@ -1,0 +1,31 @@
+@use '../../abstracts/' as *;
+
+.home-menu-overlay {
+    height: $menu-overlay-height;
+    width: 100vw;
+    position: fixed;
+    padding: 12px 0 12px 1rem;
+    background-color: $bkg-menu-overlay;
+    @include flex(row, center, start, 0.5em)
+}
+
+.button-container {
+    width: $size-button;
+    height: $size-button;
+    border-radius: 50%;
+    cursor: pointer;
+    @include flex(row, center, center);
+}
+
+.grid-button-hover {
+    color: $light !important;
+}
+
+.hamburger-button-container {
+    @extend .button-container;
+    width: auto;
+}
+
+.arrow-left {
+    color: $bkg-menu-overlay;
+}
