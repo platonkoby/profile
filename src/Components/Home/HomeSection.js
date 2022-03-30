@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../Assets/Styles/sections/home_section.scss'
 import Title from './Title'
 
 
