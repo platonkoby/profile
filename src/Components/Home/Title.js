@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react'
-import '../../Assets/Styles/components/title.scss'
 import { GridButtonContext } from '../../Context/GridButtonContext'
 
 function Title() {

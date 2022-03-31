@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+
+.project {
+    @include flex(column, start, start, 2rem);
+}
+
+.project-title {
+    font-size: $size-project-heading;
+    font-weight: $weight-700;
+}

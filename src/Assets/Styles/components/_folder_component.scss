@@ -1,0 +1,52 @@
+@use '../abstracts/' as *;
+
+.folder {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+}
+
+.folder-tabs-container {
+    height: 40px;
+    width: inherit;
+    display: flex;
+    align-items: flex-end;
+    gap: 1px;
+}
+
+.folder-cards-container {
+    width: inherit;
+
+}
+
+.folder-tab {
+    height: 30px;
+    padding: 1rem;
+    background-color: darken($bkg-folder, 30%);
+    opacity: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 10px;
+    text-transform: capitalize;
+}
+
+.folder-card {
+    width: inherit;
+    height: 400px;
+    background-color: $bkg-folder;
+    position: absolute;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+}
+
+.high-z-index {
+    z-index: 100;
+}
+
+.active-tab {
+    opacity: 100%;
+    background-color: $bkg-folder;
+    height: 40px;
+}
