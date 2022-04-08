@@ -30,13 +30,13 @@ function MenuOverlay() {
 
   return (
     <div className='home-menu-overlay'>
-        <div className="hamburger-button-container">
+        <button className="hamburger-button-container">
           <HamburgerIcon size={mediumIconSize} onClick={toggleMenu} />
-        </div>
-        <div className={quickMenuButtonClasses}>
+        </button>
+        <button className={quickMenuButtonClasses}>
           <GridIcon size={mediumIconSize}
                     onClick={toggleGrid} />
-        </div>
+        </button>
         <ArrowLeftIcon size={bigIconSize} className={arrowIconClasses} />
     </div>
   )
