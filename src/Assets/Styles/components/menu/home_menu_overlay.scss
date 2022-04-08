@@ -4,12 +4,14 @@
     height: $menu-overlay-height;
     width: 100vw;
     position: fixed;
+    z-index: 5000;
     padding: 12px 0 12px 1rem;
     background-color: $bkg-menu-overlay;
     @include flex(row, center, flex-start, 0.5em)
 }
 
 .button-container {
+    all: initial;
     width: $size-button;
     height: $size-button;
     border-radius: 50%;

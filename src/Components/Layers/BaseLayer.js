@@ -1,10 +1,11 @@
- import React from 'react'
+import React from 'react'
 import '../../Assets/Styles/components/layers/layer.scss'
 import '../../Assets/Styles/components/layers/base_layer.scss'
 import HomeSection from '../Home/HomeSection'
 import MenuOverlay from '../Home/MenuOverlay'
 import AboutMe from '../AboutMe/AboutMe'
 import WorkingExperience from '../WorkingExperience/WorkingExperience'
+import PersonalProjects from '../PersonalProjects/PersonalProjects'
 
 function BaseLayer() {
 
@@ -17,6 +18,7 @@ function BaseLayer() {
         <MenuOverlay />
         <AboutMe />
         <WorkingExperience />
+        <PersonalProjects />
       </div>
     </div>
   )
